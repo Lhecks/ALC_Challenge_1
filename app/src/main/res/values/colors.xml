@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1930CF</color>
+    <color name="colorPrimaryDark">#4154CC</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="button_color">#D38106</color>
+    <color name="white_color">#fff</color>
+    <color name="view_color">#0C0B0B</color>
+    <color name="card_color">#5A5858</color>
+</resources>
