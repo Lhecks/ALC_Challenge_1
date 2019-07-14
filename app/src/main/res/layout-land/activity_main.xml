@@ -1,65 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
-    android:padding="@dimen/dim_margin"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/first_row"
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:gravity="center"
-        android:orientation="vertical">
+    <Button
+        android:id="@+id/button_profile"
+        android:layout_marginTop="80dp"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:onClick="profileButton"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_toRightOf="@+id/image_header"
+        android:text="@string/my_profile_button"
+        android:textAllCaps="false" />
+    <Button
+        android:layout_below="@+id/button_profile"
+        android:layout_toRightOf="@+id/image_header"
+        android:layout_marginTop="40dp"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:background="@drawable/bg_button"
+        android:onClick="aboutButton"
+        android:text="@string/about_alc_button"
+        android:textAllCaps="false" />
 
-        <Button
-            style="@style/TextAppearance.MaterialComponents.Headline4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_button"
-            android:clickable="true"
-            android:onClick="profileButton"
-            android:text="@string/my_profile_button"
-            android:textAllCaps="false" />
-
-        <Button
-            style="@style/TextAppearance.MaterialComponents.Headline4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/bg_button"
-            android:clickable="true"
-            android:onClick="aboutButton"
-            android:text="@string/about_alc_button"
-            android:textAllCaps="false" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/sec"
-        android:layout_toLeftOf="@+id/first_row"
+    <android.support.v7.widget.CardView
+        android:id="@+id/image_header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_alignParentRight="true">
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+        app:cardElevation="12dp"
+        android:padding="@dimen/margin_card"
+        app:cardBackgroundColor="@color/colorPrimary">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
             android:src="@drawable/alc_logo"/>
         <TextView
-            android:layout_marginTop="16dp"
+            android:id="@+id/text_header_main"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:textColor="@color/white_color"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to ALC 4.0"
+            android:text="@string/welcome_message"
             android:textStyle="italic"
-            style="@style/TextAppearance.MaterialComponents.Headline4"/>
-    </LinearLayout>
-
-
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_marginLeft="@dimen/fab_margin" />
+    </android.support.v7.widget.CardView>
 </RelativeLayout>

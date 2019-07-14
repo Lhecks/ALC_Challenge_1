@@ -10,9 +10,9 @@
     android:padding="@dimen/dim_margin"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:src="@drawable/alc_logo"/>
     <TextView
         android:layout_marginTop="16dp"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="Welcome to ALC 4.0"
         android:textStyle="italic"
-        style="@style/TextAppearance.MaterialComponents.Headline4"/>
+        style="@style/TextAppearance.MaterialComponents.Headline5"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
